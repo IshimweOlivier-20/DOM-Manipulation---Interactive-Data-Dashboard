@@ -1,0 +1,24 @@
+:root {
+  --color-success: #e6ffe6;
+  --color-warning: #fffbe6;
+  --color-danger: #ffe6e6;
+  --color-primary: #e600ff;
+  --color-dark: #333;
+  --color-light: #f9f9f9;
+  --shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* ===== Base Styles ===== */
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--color-light);
+  color: var(--color-dark);
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  color: var(--color-primary);
+  margin-bottom: 30px;
+}

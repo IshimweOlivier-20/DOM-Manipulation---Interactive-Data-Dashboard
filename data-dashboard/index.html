@@ -1,58 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>InsightFlow Employee Dashboard</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
     <h1>InsightFlow Employee Performance Dashboard</h1>
-    
+
     <div class="controls">
-        <input type="text" id="search" placeholder="Search by name...">
-        <select id="roleFilter">
-            <option value="">All Roles</option>
+      <input type="text" id="search" placeholder="Search by name..." />
+      <select id="roleFilter">
+        <option value="">All Roles</option>
+        <option value="Developer">Developer</option>
+        <option value="Designer">Designer</option>
+        <option value="Project Manager">Project Manager</option>
+        <option value="QA Engineer">QA Engineer</option>
+      </select>
+      <button id="addEmployeeBtn">Add Employee</button>
+    </div>
+
+    <div id="tableContainer">
+      <!-- Table will be rendered here dynamically -->
+    </div>
+
+    <div id="summary">
+      <!-- Summary stats will be rendered here dynamically -->
+    </div>
+
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2 id="modalTitle">Edit Employee</h2>
+        <form id="employeeForm">
+          <label for="name">Name:</label>
+          <input type="text" id="name" required />
+
+          <label for="role">Role:</label>
+          <select id="role" required>
             <option value="Developer">Developer</option>
             <option value="Designer">Designer</option>
             <option value="Project Manager">Project Manager</option>
             <option value="QA Engineer">QA Engineer</option>
-        </select>
-        <button id="addEmployeeBtn">Add Employee</button>
+          </select>
+
+          <label for="score">Score:</label>
+          <input type="number" id="score" min="0" max="100" required />
+
+          <button type="submit">Save</button>
+        </form>
+      </div>
     </div>
-    
-    <div id="tableContainer">
-        <!-- Table will be rendered here dynamically -->
-    </div>
-    
-    <div id="summary">
-        <!-- Summary stats will be rendered here dynamically -->
-    </div>
-    
-    <div id="modal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <h2 id="modalTitle">Edit Employee</h2>
-            <form id="employeeForm">
-                <label for="name">Name:</label>
-                <input type="text" id="name" required>
-                
-                <label for="role">Role:</label>
-                <select id="role" required>
-                    <option value="Developer">Developer</option>
-                    <option value="Designer">Designer</option>
-                    <option value="Project Manager">Project Manager</option>
-                    <option value="QA Engineer">QA Engineer</option>
-                </select>
-                
-                <label for="score">Score:</label>
-                <input type="number" id="score" min="0" max="100" required>
-                
-                <button type="submit">Save</button>
-            </form>
-        </div>
-    </div>
-    
+
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
